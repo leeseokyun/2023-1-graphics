@@ -10,7 +10,7 @@ function draw() {
   background(102);
   e1.update(mouseX, mouseY);
   e2.update(mouseX, mouseY);
-  e3.update(mouseX, mouseY);
+  e3.update(mouseX, mouseY); //마우스 좌표 따라 가기
   e1.display();
   e2.display();
   e3.display();
@@ -31,7 +31,7 @@ class Eye {
     fill(255);
     ellipse(0, 0, this.size, this.size);
     rotate(this.angle);
-    fill(153, 204, 0);
+    fill(153, 204, 0); //눈동자 색
     ellipse(this.size / 4, 0, this.size / 2, this.size / 2);
     pop();
   }
