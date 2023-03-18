@@ -27,12 +27,12 @@ class E {
   }
   d() {
     push();
-    translate(this.x, this.y);
+    translate(this.x, this.y); //원형의 중심으로 기준점 이동
     fill(255);
     ellipse(0, 0, this.size, this.size);
     rotate(this.angle);
     fill(153, 204, 0); //눈동자 색
-    ellipse(this.size / 4, 0, this.size / 2, this.size / 2);
+    ellipse(this.size / 4, 0, this.size / 2, this.size / 2); //눈동자크기 원의 반으로 
     pop();
   }
 }
