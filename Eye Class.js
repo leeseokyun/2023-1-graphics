@@ -1,31 +1,31 @@
 let e1, e2, e3;
 function setup() {
-  createCanvas(640, 360);
+  createCanvas(600, 400);
   noStroke();
-  e1 = new Eye(250, 16, 120);
-  e2 = new Eye(164, 185, 80);
-  e3 = new Eye(420, 230, 220);
+  e1 = new E(250, 16, 120);
+  e2 = new E(160, 190, 80);
+  e3 = new E(420, 230, 220); //(x좌표, y좌표, 크기)
 }
 function draw() {
   background(102);
-  e1.update(mouseX, mouseY);
-  e2.update(mouseX, mouseY);
-  e3.update(mouseX, mouseY); //마우스 좌표 따라 가기
-  e1.display();
-  e2.display();
-  e3.display();
+  e1.u(mouseX, mouseY);
+  e2.u(mouseX, mouseY);
+  e3.u(mouseX, mouseY); //마우스 좌표 따라 가기
+  e1.d();
+  e2.d();
+  e3.d();
 }
-class Eye {
+class E {
   constructor(tx, ty, ts) {
     this.x = tx;
     this.y = ty;
     this.size = ts;
     this.angle = 0.0;
   }
-  update(mx, my) {
+  u(mx, my) {
     this.angle = atan2(my - this.y, mx - this.x);
   }
-  display() {
+  d() {
     push();
     translate(this.x, this.y);
     fill(255);
